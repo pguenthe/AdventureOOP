@@ -31,4 +31,8 @@ public class MonsterRoom extends Room {
 	public void challenge () {
 		System.out.println("You died.");
 	}
+	
+	public void disposeOfCorpse() {
+		System.out.println("Corpse left in pile.");
+	}
 }

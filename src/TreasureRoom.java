@@ -36,8 +36,6 @@ public class TreasureRoom extends Room {
 	//extend: do e/t the super method does and more
 	//which means I need to call the method from the superclass
 	public void challenge () {
-		super.challenge();
 		System.out.println("However, there is a " + name + " here worth " + value + " gold pieces");
-		super.challenge();
 	}
 }

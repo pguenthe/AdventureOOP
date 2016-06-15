@@ -1,43 +1,50 @@
+import java.util.Scanner;
 
-public class TreasureRoom extends Room {
-	private String name;
-	private int value;
+public class TrapRoom extends Room {
+	private String question;
+	private String answer;
 	
-	public TreasureRoom (String title, String description, 
-			String name, int value) {
+	public TrapRoom (String title, String description, 
+			String question, String answer) {
 		//call the super constructor
 		//can only be called from a subclass constructor
 		//AND only as the first line in the subclass constructor
 		super(title, description);
-		this.name = name;
-		this.value = value;
+		this.question = question;
+		this.answer = answer;
 	}
 	
 	
-	public String getName() {
-		return name;
+	public String getQuestion() {
+		return question;
 	}
 
 
-	public int getValue() {
-		return value;
+	public String getAnswer() {
+		return answer;
 	}
 
 
-	public void setName(String name) {
-		this.name = name;
+	public void setQuestion(String question) {
+		this.question = question;
 	}
 
 
-	public void setValue(int value) {
-		this.value = value;
+	public void setAnswer(String answer) {
+		this.answer = answer;
 	}
 
 	//extend: do e/t the super method does and more
 	//which means I need to call the method from the superclass
 	public void challenge () {
-		super.challenge();
-		System.out.println("However, there is a " + name + " here worth " + value + " gold pieces");
-		super.challenge();
+		System.out.println(question);
+		Scanner scan = new Scanner(System.in);
+		String ans = scan.nextLine();
+		if (answer.equalsIgnoreCase(ans)) {
+			System.out.println("You live");
+		} else {
+			System.out.println("You die.");
+		}
+		scan.close();
 	}
 }
