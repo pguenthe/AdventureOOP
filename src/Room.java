@@ -1,5 +1,5 @@
-
-public class Room {
+//class must be abstract because it has 1 or more abstract methods
+public abstract class Room {
 	private String title;
 	private String description;
 	
@@ -29,10 +29,10 @@ public class Room {
 		System.out.println(description);
 		System.out.println();
 	}
-	
-	public void challenge() {
-		System.out.println("The room is empty. Have a nice day!");
-	}
-	
-	
+
+	//method I don't need
+	//by making an abstract method, I'm enforcing that subclasses MUST
+	// implement this method--they actually have to write this method
+	// with this exact signature
+	public abstract void challenge();	
 }

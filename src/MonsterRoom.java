@@ -25,7 +25,7 @@ public class MonsterRoom extends Room {
 	public void setDifficulty(int difficulty) {
 		this.difficulty = difficulty;
 	}
-	
+
 	@Override
 	//this is a straight-up override, Room's challenge() is ignored
 	public void challenge () {
